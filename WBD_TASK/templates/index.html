@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rekommenderade Produkter</title>
+</head>
+<body>
+    <h1>Välkommen till Blocket</h1>
+    <p>Se de mest populära produkterna idag!</p>
+    <ul id="recommendations"></ul>
+
+    <script>
+        // Hämta rekommenderade produkter från API
+        fetch('/recommendations/new_user')
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById('recommendations');
+                data.forEach(item => {
+                    let li = document.createElement('li');
+                    li.textContent = `${item.name} - Antal bud: ${item.bid_count}`;
+                    list.appendChild(li);
+                });
+            });
+    </script>
+</body>
+</html>
