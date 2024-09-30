@@ -5,7 +5,9 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
-
+'''In this section, I am defining classes that will serve as table names and columns within the database, 
+establishing the relationships between each table.
+'''
 class User(Base):
     __tablename__ = 'users'
     user_id = Column(Integer, primary_key=True)
@@ -51,8 +53,7 @@ class Bid(Base):
     item = relationship('Item', back_populates='bids')
     user = relationship('User')
 
-
-#Here I create a database with the name blocket with the enteties from above
+'''Here I am creating a database with the name blocket with the enteties from above'''
 
 engine = create_engine('sqlite:////Users/rt/WBD_TASK/blocket.db')
 Base.metadata.create_all(engine)
@@ -61,7 +62,7 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-
+'''Now I am creating test data '''
 
 def populate_db():
     mobiles = Category(category_name='Mobiles')
@@ -96,9 +97,10 @@ def populate_db():
 
 populate_db()
 
-
-
-
+'''
+The populate_db() function creates test data for categories and users, adds them to the database, and saves the changes. 
+By using print statements, the user of the program receives confirmation of which objects have been added to the database.
+'''
 
 
 
