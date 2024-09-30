@@ -9,9 +9,12 @@ A database with relationships between users, items, categories, and bids.
  
 ## Data Model
 
-Here is a visual representation of the database structure used in the project:
+You will find a visual representation of the database structure used in the project in the filename:
+model_databases.pdf
 
-![Data Model](https://github.com/rimiana/Blocket_recommendation_system/blob/main/model_databases.pdf)
+
+
+
 
 
 
