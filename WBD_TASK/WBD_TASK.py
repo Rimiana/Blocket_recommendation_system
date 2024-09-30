@@ -12,7 +12,6 @@ class User(Base):
     username = Column(String,nullable=False)
     email = Column(String, nullable=False)
 
-# back_polulates= seller betyder att seller är namnet på relationen mellan item och user
 
     items = relationship('Item', back_populates='seller')
 
@@ -53,6 +52,7 @@ class Bid(Base):
     user = relationship('User')
 
 
+#Here I create a database with the name blocket with the enteties from above
 
 engine = create_engine('sqlite:////Users/rt/WBD_TASK/blocket.db')
 Base.metadata.create_all(engine)
