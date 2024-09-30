@@ -6,6 +6,7 @@ APIs for retrieving new users.
 A web interface for displaying product recommendations.
 A database with relationships between users, items, categories, and bids.
 
+You will find comments in WBD_TASK that explains how the database is created and the test data.
  
 ## Data Model
 
