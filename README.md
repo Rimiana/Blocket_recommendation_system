@@ -11,4 +11,5 @@ A database with relationships between users, items, categories, and bids.
 
 Here is a visual representation of the database structure used in the project:
 
-![Data Model](https://github.com/Rimiana/Blocket_recommendation_system/blob/main/Modeldatabases.pdf)
+WBD_TASK/Model databases.pdf
+
