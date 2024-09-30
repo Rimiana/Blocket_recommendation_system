@@ -71,11 +71,11 @@ def populate_db():
     print('kategorierna är tillagda')
 
 
-    sara = User(username= 'Sara', email='saratesfai@live.se')
-    mohammed = User(username= 'Mohammed', email='mohammedbakri@live.se')
-    rimiana = User(username='Rimiana', email='rimianatesfai@live.se')
+    sara = User(username= 'Sara', email='sara@example.se')
+    mohammed = User(username= 'Mohammed', email='mohammed@example.se')
+    rimiana = User(username='Rimiana', email='rimiana@example.se')
     adam = User(username='Adam', email='adam@example.se')
-    lina = User(username='Lina', email='lina@emaple.se')
+    lina = User(username='Lina', email='lina@example.se')
     session.add_all([sara,mohammed,rimiana,adam,lina])
     session.commit()
     print('användarna är tillagda')
