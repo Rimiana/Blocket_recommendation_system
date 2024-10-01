@@ -9,7 +9,7 @@
     <ul id="recommendations"></ul>
 
     <script>
-        // Hämta rekommenderade produkter från API
+        // Get recommendations for new users
         fetch('/recommendations/new_user')
             .then(response => response.json())
             .then(data => {
